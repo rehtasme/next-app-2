@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --unit: 21px;
+
+  --type-s-font: 11.5px;
+  --type-s-line: 12.5px;
+
+  --type-l-font: 28.1px;
+  --type-l-line: 31.4px;
+  --type-l-letter-spacing: -0.05em;
+
+  --row-height: calc((100vh - calc(var(--unit) * 9)) / 8);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: black;
+  font-family: 'Inter', 'Noto Sans JP', sans-serif;
+  font-weight: 700;
+  font-size: var(--type-s-font);
+  line-height: var(--type-s-line);
+  letter-spacing: -0.033em;
+}
+
+.text-l {
+  font-size: var(--type-l-font);
+  line-height: var(--type-l-line);
+  letter-spacing: var(--type-l-letter-spacing);
+}
+
+h3 {
+  font-size: var(--type-l-font);
+  line-height: var(--type-l-line);
+}
+
+.grid-8 {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  column-gap: var(--unit);
+  max-width: 1800px;
+  margin: 0 auto;
+  padding: 0 var(--unit); /* Optional side padding */
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.grid-8 > * {
+  outline: 1px dashed rgba(255, 0, 0, 0.3);
+}

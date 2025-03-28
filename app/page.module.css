@@ -1,0 +1,31 @@
+.section {
+  margin-top: var(--unit);
+  margin-bottom: var(--unit);
+}
+
+.sidebarLeft {
+  grid-column: 1 / span 1;
+  position: sticky;
+  top: calc(var(--unit) * 2);
+  align-self: start;
+}
+
+.sidebarRight {
+  grid-column: 2 / span 1;
+  position: sticky;
+  top: calc(var(--unit) * 2);
+  align-self: start;
+}
+
+.products {
+  grid-column: 3 / span 6;
+}
+
+.productCard {
+  border: 1px solid black;
+  padding: var(--unit);
+  display: flex;
+  flex-direction: column;
+  gap: var(--unit);
+  max-width: 180px;
+}

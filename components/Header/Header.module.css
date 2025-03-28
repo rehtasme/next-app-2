@@ -1,0 +1,35 @@
+.header {
+    padding-top: var(--unit);
+    padding-bottom: var(--unit);
+    border-bottom: 1px solid black;
+    height: var(--row-height); /* set in globals.css or inline */
+    box-sizing: border-box;
+  }
+  
+  .logo {
+    font-size: var(--type-l-font);
+    line-height: var(--type-l-line);
+    letter-spacing: var(--type-l-letter-spacing);
+    font-weight: 700;
+  }
+  
+  .nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: var(--unit);
+  }
+
+  .navCol {
+    display: flex;
+    align-items: start;  /* or center, depending on your desired vertical alignment */
+    justify-content: flex-start; /* aligns text to the left of the column */
+  }
+  
+  .navItem {
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: var(--type-s-font);
+    line-height: var(--type-s-line);
+    font-weight: 500;
+  }
+  
